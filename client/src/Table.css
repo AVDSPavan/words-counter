@@ -11,7 +11,7 @@ thead {
 tbody {
     flex: 1 1 auto;
     display: block;
-    height: 60vh;
+    height: 50vh;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -21,12 +21,13 @@ tr {
     display: table;
     table-layout: fixed;
 }
+
 table {
     width: 100%;
 }
+
 td {
     max-width: 0;
     overflow: hidden;
-    text-overflow: ellipsis;
     white-space: nowrap;
 }

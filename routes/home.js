@@ -16,7 +16,7 @@ router.get("/:limit", (req, res) => {
 		if (!error && response.statusCode == 200) {
 			let data = body;
 			data = data.replace(/[\n]/gi, " ");
-			data = data.replace(/[^A-Za-z\s\']/gi, " ");
+			data = data.replace(/[^A-Za-z\']/gi, " ");
 			data = data.split(" ");
 			output = {};
 			for (var i = 0; i < data.length; i++) {

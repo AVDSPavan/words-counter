@@ -18,7 +18,7 @@ export const App = () => {
 		<div className="container" style={{ position: "relative" }}>
 			<br />
 			<p
-				className="text"
+				className="text bold"
 				style={{
 					textAlign: "center",
 					backgroundColor: "yellow",
@@ -35,7 +35,7 @@ export const App = () => {
 			{/* <h1>{document.getElementById("limit").value}</h1> */}
 			<div className="container">
 				<div className="row">
-					<div className="col-6 offset-3">
+					<div className="col-lg-4 offset-lg-4 col-sm-6 offset-sm-3">
 						<form
 							onSubmit={(event) => {
 								event.preventDefault();

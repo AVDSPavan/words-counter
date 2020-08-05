@@ -2,12 +2,11 @@ import "./Table.css";
 import React from "react";
 export const Table = ({ data }) => {
 	return (
-		<div className="container">
 			<div className="row">
-				<div className="col-xl-8 offset-xl-2 col-sm">
+				<div className="col-xl-6 offset-xl-3 col-sm">
 					<div className="table-responsive">
-						<table className="table table-dark ">
-							<thead style={{ textAlign: "center", fontSize: "4vh" }}>
+						<table className="table table-dark w-auto">
+							<thead style={{ textAlign: "center", fontSize: "3vh" }}>
 								<tr>
 									<td className="text-info">#</td>
 									<td colSpan="2" className="text-info">
@@ -16,7 +15,7 @@ export const Table = ({ data }) => {
 									<td className="text-info">Count</td>
 								</tr>
 							</thead>
-							<tbody style={{ textAlign: "center", fontSize: "3vh" }}>
+							<tbody style={{ textAlign: "center", fontSize: "2.5vh" }}>
 								{data.map((word, index) => {
 									return (
 										<tr key={index}>
@@ -30,7 +29,6 @@ export const Table = ({ data }) => {
 						</table>
 					</div>
 				</div>
-			</div>
 		</div>
 	);
 };

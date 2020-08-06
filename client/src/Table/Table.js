@@ -9,16 +9,16 @@ export const Table = ({ data }) => {
 						<thead
 							style={{
 								textAlign: "center",
-								fontSize: "3vh",
+								fontSize: "150%",
 								backgroundColor: "#00CCCD",
 								color: "#E8290B",
-								fontFamily: "cursive",
+								fontFamily: "sans-serif",
 							}}>
 							<tr>
 								<td className="text">
-									<b>#</b>
+									<b>Rank</b>
 								</td>
-								<td colSpan="2" className="text">
+								<td className="text">
 									<b>Word</b>
 								</td>
 								<td className="text">
@@ -26,7 +26,7 @@ export const Table = ({ data }) => {
 								</td>
 							</tr>
 						</thead>
-						<tbody style={{ textAlign: "center", fontSize: "2.5vh" }}>
+						<tbody style={{ textAlign: "center", fontSize: "100%" }}>
 							{data.map((word, index) => {
 								return (
 									<tr key={index}>

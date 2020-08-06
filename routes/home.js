@@ -14,30 +14,28 @@ router.get("/:limit", (req, res) => {
 		body
 	) {
 		if (!error && response.statusCode == 200) {
-			let data = body;
-			data = data.replace(/[\n]/gi, " ");
-			data = data.replace(/[^A-Za-z\']/gi, " ");
-			data = data.split(" ");
-			output = {};
-			for (var i = 0; i < data.length; i++) {
-				var word = data[i];
-				if (output[word] === undefined) {
-					output[word] = 1;
+			let words = body;
+			words = words.replace(/[\n]/gi, " ");
+			words = words.replace(/[^A-Za-z\']/gi, " ");
+			words = words.split(" ");
+			wordsCount = {};
+			for (var i = 0; i < words.length; i++) {
+				var word = words[i].toLowerCase();
+				if (wordsCount[word] === undefined) {
+					wordsCount[word] = 1;
 				} else {
-					output[word] += 1;
+					wordsCount[word] += 1;
 				}
 			}
-			delete output[""];
+			delete wordsCount[""];
 			// Create items array
-			let items = Object.keys(output).map(function (key) {
-				return [key, output[key]];
+			let items = Object.keys(wordsCount).map(function (key) {
+				return [key, wordsCount[key]];
 			});
-
 			// Sort the array based on the second element
 			items.sort(function (first, second) {
 				return second[1] - first[1];
 			});
-
 			// Create a new array with only the first 5 items
 			return res.json(items.slice(0, req.word_limit));
 		}

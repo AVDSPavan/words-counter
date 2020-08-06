@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Table } from "./Table";
+import { Table } from "./Table/Table";
 export const App = () => {
 	//const [limit, setLimit] = useState(0);
 	const [data, setData] = useState([]);
@@ -16,7 +16,6 @@ export const App = () => {
 
 	return (
 		<div className="container" style={{ position: "relative" }}>
-			<br />
 			<p
 				className="text bold"
 				style={{

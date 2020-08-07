@@ -1,4 +1,4 @@
-# words-counter
+# Words-Counter
 
 It is a simple web application to display the top N most frequently occurring words in a file which had to be fetched from a url. It is developed using React js in frontend, Node js in backend and Express framework for server. It is deployed to heroku and can accessed through the link given below.
 

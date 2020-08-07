@@ -58,7 +58,7 @@ export const App = () => {
 				</div>
 			</div>
 			<div className="container">
-				<Table data={data} />
+				{data.length !== 0 && <Table data={data} />}
 			</div>
 		</div>
 	);
